@@ -1,23 +1,22 @@
 #include <stdio.h>
-
+#include <ctype.h>
 /**
- *main - print lowercase alpha a-z but remove 'q' and 'e'
- *Return: Always 0 (Success)
+ *main - Program to print alphabet letters except q and e followed by new line
+ *
+ *Return: return 0
  */
-
 int main(void)
 {
-	char alpha = 'a';
+	int letter;
 
-	while (alpha <= 'z')
+	for (letter = 'a'; letter <= 'z'; letter++)
 	{
-		if ((alpha != 'q') && (alpha != 'e'))
+		if (letter == 'q' || letter == 'e')
 		{
-			putchar(alpha);
+			continue;
 		}
-		alpha++;
+		putchar(letter);
 	}
 	putchar('\n');
-
 	return (0);
 }

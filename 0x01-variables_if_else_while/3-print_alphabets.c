@@ -1,28 +1,28 @@
 #include <stdio.h>
-
+#include <ctype.h>
 /**
- *main - print lowercase and uppercase a-zA-Z using putchar
- *Return: Always 0 (Success)
+ *main - Program to print alphabet letters in all cases followed by new line
+ *
+ *Return: return 0
  */
-
 int main(void)
 {
-	char lower = 'a';
-	char upper = 'A';
+	int letter;
 
-	while (lower <= 'z') /*print lowercases a-z*/
+	for (letter = 'a'; letter <= 'z'; letter++)
 	{
-		putchar(lower);
-		lower++;
+		letter = tolower(letter);
+		putchar(letter);
+		if (letter == 'z')
+		{
+			letter = 'A';
+			for (; letter <= 'Z'; letter++)
+			{
+				putchar(letter);
+			}
+			break;
+		}
 	}
-
-	while (upper <= 'Z') /*print uppercase A-Z*/
-	{
-		putchar(upper);
-		upper++;
-	}
-
 	putchar('\n');
-
 	return (0);
 }

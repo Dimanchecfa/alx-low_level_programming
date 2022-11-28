@@ -1,20 +1,19 @@
 #include <stdio.h>
-
+#include <ctype.h>
 /**
- *main - print lowercase a-z
- *Return: Always 0 (Success)
+ *main - Program to print alphabet letter followed by new line
+ *
+ *Return: return 0
  */
-
 int main(void)
 {
-	char alpha = 'a';
+	int letter;
 
-	while (alpha <= 'z')
+	for (letter = 'a'; letter <= 'z'; letter++)
 	{
-		putchar(alpha);
-		alpha++;
+		letter = tolower(letter);
+		putchar(letter);
 	}
 	putchar('\n');
-
 	return (0);
 }

@@ -1,24 +1,24 @@
 #include "main.h"
 /**
- * more_numbers - prints 0 to 14 then times
- * Return: Always 0
+ *more_numbers - prints numbers to 14
+ *
+ *Return: returns nothing
  */
-
 void more_numbers(void)
 {
-	int num, a;
+    int number1, number2;
 
-	for (a = 0; a <= 9; a++)
-	{
-		for num(num = 0; num <= 14; num++)
-		{
-			if (num < 9)
-			{
-				_putchar((num / 10) + '0');
-			}
-			_putchar((num % 10) + '0');
-		}
+    for (number1 = 0; number1 < 10; number1++)
+    {
+        for (number2 = 0; number2 <= 14; number2++)
 
-		_putchar('«n');
-	}
+        {
+            if (number2 > 9)
+            {
+                _putchar((number2 / 10) + '0');
+            }
+            _putchar((number2 % 10) + '0');
+        }
+        _putchar(10);
+    }
 }

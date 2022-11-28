@@ -1,13 +1,12 @@
 #include "main.h"
 /**
- * _mul - multiply two numbers
- * @a: firest number
- * @b: second number
- * Return: multiplication for a and b
+ *mul - function that multipliestwo numbers
+ *@a: first number
+ *@b: second number
+ *Return: returns result
  */
 
-int _mul(int a, int b)
+int mul(int a, int b)
 {
-	return (a * b);
+    return (a * b);
 }
-
